@@ -60,7 +60,7 @@
             <p>
             Notice that the algorithm is expressed as a boolean function. This is essential to understanding the algorithm. If solve(n) is true, that means node n is part of a solution--that is, node n is one of the nodes on a path from the root to some goal node. We say that n is solvable. If solve(n) is false, then there is no path that includes n to any goal node.
         </p></div>
-        <p>How does it work?</p>
+        <p> <strong>How does it work?</strong></p>
         <ul>
             <li>If any child of n is solvable, then n is solvable.</li>
             <li>If no child of n is solvable, then n is not solvable.</li>
@@ -317,7 +317,7 @@
         <strong>boolean okToColor(int row, int column, int color)</strong><br> Used by method 2 to check, at every node, whether there is an adjacent node already colored with the given color. 
     </p>
     <p>
-        <strong>int[] nextRowAndColumn(i nt row, int column)</strong><br> Used by both methods to find the next "country" (actually, the row and column of the next square on the checkerboard).
+        <strong>int[] nextRowAndColumn(int row, int column)</strong><br> Used by both methods to find the next "country" (actually, the row and column of the next square on the checkerboard).
     </p>
     <p>Here's the code for method 1:</p>
     <div style="border: 1px solid grey ">
@@ -375,7 +375,7 @@
         The zeros in the above table indicate times too short to measure (less than 1 millisecond). Why this huge difference? Either of these methods could have exponential growth. Eliminating a node automatically eliminates all of its descendents, and this will often prevent exponential growth. Conversely, by waiting to check until a leaf node is reached, exponential growth is practically guaranteed. If there is any way to eliminate children (reduce the set of choices), do so!
     </p>
     <hr>
-    <u><h3>Debugging techniques</h3></u>
+    <h3>Debugging techniques</h3>
     <p>
         Often our first try at a program doesn't work, and we need to debug it. Debuggers are helpful, but sometimes we need to fall back on inserting print statements. There are some simple tricks to making effective use of print statements. These tricks can be applied to any program, but are especially useful when you are trying to debug recursive routines.
     </p>
@@ -689,27 +689,29 @@
     <p>
         Here is some output from the program:
     </p>
-    <ol start="16" reversed style="color:blue ">
-        <b>
-        <li style="color: black;">WHITE WHITE WHITE _____ BLACK BLACK BLACK</li>
-        <li style="color: black;">WHITE WHITE WHITE BLACK _____ BLACK BLACK</li>
-        <li style="color: black;">WHITE WHITE _____ BLACK WHITE BLACK BLACK</li>
-        <li style="color: black;">WHITE _____ WHITE BLACK WHITE BLACK BLACK</li>
-        <li style="color: black;">WHITE BLACK WHITE _____ WHITE BLACK BLACK</li>
-        <li style="color: black;">WHITE BLACK WHITE BLACK WHITE _____ BLACK</li>
-        <li style="color: black;">WHITE BLACK WHITE BLACK WHITE BLACK _____</li>
-        <li style="color: black;">WHITE BLACK WHITE BLACK _____ BLACK WHITE</li>
-        <li style="color: black;">WHITE BLACK _____ BLACK WHITE BLACK WHITE</li>
-        <li style="color: black;">_____ BLACK WHITE BLACK WHITE BLACK WHITE</li>
-        <li style="color: black;">BLACK _____ WHITE BLACK WHITE BLACK WHITE</li>
-        <li style="color: black;">BLACK BLACK WHITE _____ WHITE BLACK WHITE</li>
-        <li style="color: black;">BLACK BLACK WHITE BLACK WHITE _____ WHITE</li>
-        <li style="color: black;">BLACK BLACK WHITE BLACK _____ WHITE WHITE</li>
-        <li style="color: black;">BLACK BLACK WHITE _____ BLACK WHITE WHITE</li>
-        <li style="color: black;">BLACK BLACK BLACK _____ WHITE WHITE WHITE</li>
-    </b>
+    <ol start="16" reversed  style="color:blue" >
+            
+
+      <li><span style=color:black><strong>WHITE WHITE WHITE _____ BLACK BLACK BLACK</strong></li>
+      <li><span style=color:black><strong>WHITE WHITE WHITE BLACK _____ BLACK BLACK</strong> </li>
+      <li><span style=color:black><strong>WHITE WHITE _____ BLACK WHITE BLACK BLACK</strong> </li>
+      <li><span style=color:black><strong>WHITE WHITE _____ BLACK WHITE BLACK WHITE </strong> </li>
+      <li><span style=color:black><strong>WHITE BLACK WHITE _____ WHITE BLACK BLACK </strong> </li>
+      <li><span style=color:black><strong>WHITE BLACK WHITE BLACK WHITE _____ BLACK</strong> </li>
+      <li><span style=color:black><strong>WHITE BLACK WHITE BLACK WHITE BLACK _____</strong> </li>
+      <li><span style=color:black><strong>WHITE BLACK WHITE BLACK _____ BLACK WHITE </strong> </li>
+      <li><span style=color:black><strong>WHITE BLACK _____BLACK WHITE BLACK WHITE </strong> </li>
+      <li><span style=color:black><strong>_____ BLACK WHITE BLACK WHITE BLACK WHITE</strong> </li>
+      <li><span style=color:black><strong>BLACK _____ WHITE BLACK WHITE BLACK WHITE  </strong> </li>
+      <li><span style=color:black><strong>BLACK BLACK WHITE _____ WHITE BLACK WHITE </strong> </li>
+      <li><span style=color:black><strong>BLACK BLACK WHITE BLACK WHITE _____ WHITE</strong> </li>
+      <li><span style=color:black><strong>BLACK BLACK WHITE BLACK _____ WHITE WHITE </strong> </li>
+      <li><span style=color:black><strong>BLACK BLACK _____ BLACK WHITE WHITE WHITE </strong> </li>
+      <li><span style=color:black><strong>BLACK BLACK BLACK _____ WHITE WHITE WHITE </strong></li>
+        
+                
     </ol>
-    <p style="background-color: gray;">
+    <p style="background-color:#858585;">
         Notice that the solution is given in reverse order: BLACK starts out on the left and WHITE on the right, as in the last line. I've added line numbers to the actual output in order to emphasize this point. Backtracking always produces its results (sequence of choices) in reverse order; it is up to you, the programmer, to reverse the results again to get them in the correct order.
     </p>
 </body>
